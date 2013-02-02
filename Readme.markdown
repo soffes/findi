@@ -20,7 +20,10 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+``` ruby
+> client = Findi::Client.new('steve@mac.com', 'password')
+> client.devices
+```
 
 ## Contributing
 
