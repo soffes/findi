@@ -4,7 +4,7 @@ module Findi
 
     def initialize(json)
       if location = json['location'] and location.is_a?(Hash)
-        @location_timestamp = location['timeStamp']
+        @location_timestamp = Time.at(location['timeStamp'] / 1000)
         @location_type = location['positionType']
         @horizontal_accuracy = location['horizontalAccuracy']
         @location_finished = location['locationFinished']
